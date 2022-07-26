@@ -1,14 +1,35 @@
 /* VARIABLES */
 
 :root{
-  /* --main-text-color : #fff; */
-  /* --main-bg-color : #fff; */
-  /* --main-font-size : 16px; */
-  /* --main-font-weight : 400; */
-  /* --main-line-height : 1.5; */
+  --main-text-color : #fff;
+  --main-font-weight : 700;
 }
 
 /* GENERAL */
+
+@font-face {
+  font-family: "Livvic";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/livvic-v13-latin-regular.woff2") format("woff2"), 
+       url("../fonts/livvic-v13-latin-regular.woff") format("woff"); 
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-display: swap;
+  font-weight: 600;
+  src: url("../fonts/livvic-v13-latin-600.woff2") format("woff2"), 
+       url("../fonts/livvic-v13-latin-600.woff") format("woff"); 
+}
+
+@font-face {
+  font-family: "Livvic";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/livvic-v13-latin-700.woff2") format("woff2"), 
+       url("../fonts/livvic-v13-latin-700.woff") format("woff"); 
+}
 
 *,
 *::before,
@@ -20,6 +41,7 @@
 html{
   height: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 img{
@@ -33,10 +55,8 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", "Arial", sans-serif; */
-  /* font-size: 16px; */
-  /* font-weight: 400; */
-  /* line-height: var(--main-line-height); */
+  font-family: "Livvic", "Arial", sans-serif;
+  font-weight: 600;
 }
 
 /* VISUALLY-HIDDEN */
@@ -57,7 +77,7 @@ body{
 /* CONTAINER */
 
 .container{
-  /* max-width: YOUR CONTAINER MAX-WIDTH PX HERE; */
+  width: 1150px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
@@ -69,7 +89,3 @@ body{
 .site-main{
   flex-grow: 1;
 }
-
-
-
-
