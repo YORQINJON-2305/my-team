@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* VARIABLES */
 
 :root{
@@ -301,9 +308,15 @@ body{
 .contact__inner {
   padding-top: 70px;
   padding-bottom: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contact__start {
@@ -333,8 +346,12 @@ body{
 }
 
 .contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact__item:nth-child(2) {
@@ -344,7 +361,8 @@ body{
 
 .contact__item-decoration {
   display: block;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 56px;
   height: 56px;
   margin-right: 23px;
@@ -356,7 +374,9 @@ body{
   width: 56px;
   height: 56px;
   display: block;
-  transform: translateX(-30%) translateY(-30%);
+  -webkit-transform: translateX(-30%) translateY(-30%);
+      -ms-transform: translateX(-30%) translateY(-30%);
+          transform: translateX(-30%) translateY(-30%);
   background-image: url("../images/person.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -382,8 +402,13 @@ body{
 
 .contact__form {
   width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact__label {
@@ -408,6 +433,42 @@ body{
   border-bottom: 1px solid #79C8C7;
 }
 
+.contact__input::-webkit-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.contact__input::-moz-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.contact__input:-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.contact__input::-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
 .contact__input::placeholder {
   font-weight: 600;
   font-size: 15px;
@@ -415,6 +476,14 @@ body{
   letter-spacing: -0.115385px;
   color: #FFFFFF;
   opacity: 0.6;
+}
+
+.contact__input:not(:-moz-placeholder-shown):not(:focus):invalid + .contact__form-error {
+  display: block;
+}
+
+.contact__input:not(:-ms-input-placeholder):not(:focus):invalid + .contact__form-error {
+  display: block;
 }
 
 .contact__input:not(:placeholder-shown):not(:focus):invalid + .contact__form-error {
@@ -446,6 +515,42 @@ body{
   border-bottom: 1px solid #79C8C7;
 }
 
+.contact__form-msg::-webkit-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.contact__form-msg::-moz-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.contact__form-msg:-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.contact__form-msg::-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
 .contact__form-msg::placeholder {
   font-weight: 600;
   font-size: 15px;
@@ -453,6 +558,14 @@ body{
   letter-spacing: -0.115385px;
   color: #FFFFFF;
   opacity: 0.6;
+}
+
+.contact__form-msg:not(:-moz-placeholder-shown):not(:focus):invalid + .contact__form-error {
+  display: block;
+}
+
+.contact__form-msg:not(:-ms-input-placeholder):not(:focus):invalid + .contact__form-error {
+  display: block;
 }
 
 .contact__form-msg:not(:placeholder-shown):not(:focus):invalid + .contact__form-error {
@@ -473,6 +586,8 @@ body{
   background-color: #FFFFFF;
   border-radius: 24px;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -650,7 +765,9 @@ body{
   color: #FFFFFF;
   margin: 0;
   margin-bottom: 56px;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .results__heading-marked {
