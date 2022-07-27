@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* VARIABLES */
 
 :root{
@@ -34,13 +41,15 @@
 *,
 *::before,
 *::after{
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 
 html{
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -50,13 +59,19 @@ img{
 }
 
 body{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Livvic", "Arial", sans-serif;
   font-weight: 600;
+  overflow-x: hidden;
 }
 
 /* VISUALLY-HIDDEN */
@@ -69,7 +84,8 @@ body{
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -87,5 +103,268 @@ body{
 /* STICKY-FOOTER */
 
 .site-main{
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+
+/* CREATE-TEAM START */
+
+.create-team{
+  padding: 140px 0px;
+  background-color: #012F34;
+}
+
+.create-team__wrap{
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.create-team__wrap::after{
+  position: absolute;
+  right: -330px;
+  bottom: -135px;
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/create-team-circle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.create-team__start{
+  width: 470px;
+}
+
+.create-team__line{
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-bottom: 54px;
+  background-color: #F67E7E;
+}
+
+.create-team__title{
+  margin: 0;
+  font-size: 48px;
+  line-height: 48px;
+  color: var(--main-text-color);
+}
+
+.create-team__list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.create-team__item{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 540px;
+  margin-bottom: 32px;
+}
+
+.create-team__decoration{
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  margin-right: 23px;
+  background-color: #2C6269;
+  border-radius: 50%;
+}
+
+.create-team__decoration::before{
+  width: 56px;
+  height: 56px;
+  display: block;
+  background-image: url("../images/person.svg");
+  -webkit-transform: translateX(-30%) translateY(-30%);
+      -ms-transform: translateX(-30%) translateY(-30%);
+          transform: translateX(-30%) translateY(-30%);
+  content: "";
+}
+
+.create-team__decoration--setting::before{
+  background-image: url("../images/settings.svg");
+}
+
+.create-team__decoration--analyistic::before{
+  background-image: url("../images/analiystic.svg");
+}
+
+.create-team__subtitle{
+  display: block;
+  margin-bottom: 16px;
+  color: #F67E7E;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: var(--main-font-weight);
+}
+
+.create-team__descr{
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* ARTICLE START */
+
+.site-article{
+  position: relative;
+  padding: 76px 0px;
+  background-color:#F67E7E;
+}
+
+.site-article::before{
+  position: absolute;
+  right: calc(50% + 560px);
+  bottom: calc(50% - 105px);
+  width: 200px;
+  height: 145px;
+  background-image: url("../images/ready-circle.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.site-article__wrap{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.site-article__title{
+  margin: 0;
+  color: #012F34;
+  font-size: 48px;
+}
+
+/* FOOTER START */
+
+.site-footer{
+  padding: 48px 0px;
+  background-color:#002529;
+}
+
+.site-footer__wrap{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-footer__logo-wrap{
+  margin-right: 125px;
+}
+
+.logo--footer{
+  display: block;
+  margin-bottom: 25px;
+}
+
+.site-footer__list{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-footer__item:not(:last-child){
+  margin-right: 40px;
+}
+
+.site-footer__link{
+  color: #fff;
+  text-decoration: none;
+}
+
+.address-list{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: auto;
+  font-style: normal;
+}
+
+.address-list__link{
+  color: #fff;
+  font-size: 15px;
+  line-height: 23px;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.site-footer__copy-wrap{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.site-footer__company-logo{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-bottom: 51px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.site-footer__company-item:nth-child(2){
+  margin: 0px 16px;
+}
+
+.site-footer__company-link{
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.site-footer__company-link:hover{
+  color: #F67E7E;
+}
+
+.site-footer__copy{
+  margin: 0;
+  color: #fff;
+  opacity: 0.6;
 }
