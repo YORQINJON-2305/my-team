@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* VARIABLES */
 
 :root{
@@ -1195,7 +1188,17 @@ only screen and (                min-resolution: 2dppx) {
   color: var(--main-text-color);
   border-bottom: 1px solid #FFFFFF;
   background: transparent;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
+}
+
+.contact__input:not(:-moz-placeholder-shown):not(:focus):invalid{
+  border-bottom: 1px solid #F67E7E;
+}
+
+.contact__input:not(:-ms-input-placeholder):not(:focus):invalid{
+  border-bottom: 1px solid #F67E7E;
 }
 
 .contact__input:not(:placeholder-shown):not(:focus):invalid{
@@ -1284,6 +1287,14 @@ only screen and (                min-resolution: 2dppx) {
   border-bottom: 1px solid #FFFFFF;
   background: transparent;
   resize: none;
+}
+
+.contact__form-msg:not(:-moz-placeholder-shown):not(:focus):invalid {
+  border-bottom: 1px solid #F67E7E;
+}
+
+.contact__form-msg:not(:-ms-input-placeholder):not(:focus):invalid {
+  border-bottom: 1px solid #F67E7E;
 }
 
 .contact__form-msg:not(:placeholder-shown):not(:focus):invalid {
@@ -1377,4 +1388,3 @@ only screen and (                min-resolution: 2dppx) {
 .contact__form-btn:active {
   background-color: #406367;
 }
-
