@@ -4,9 +4,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
-   <!-- <link rel="stylesheet" href="./css/main.css"> -->
-   <link rel="stylesheet" href="./css/main.min.css">
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href="./css/main.css">
+   <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
    <title>Contact</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
                   </li>
                   
                   <li class="nav__item">
-                     <a class="nav__link" href="contact.html">About</a>
+                     <a class="nav__link" href="about.html">About</a>
                   </li>
                </ul>
             </nav>
@@ -67,32 +67,31 @@
                
                <div class="contact__end">
                   <form class="contact__form" action="https://echo.htmlacademy.ru/" autocomplete="off" method="POST">
-                     <div class="contact__label">
+                     <label class="contact__label">
                         <input class="contact__input" type="text" name="userName" aria-label="Enter your name" placeholder="Name" minlength="2" required>
                         <span class="contact__form-error">This field is required</span>
-                     </div>
+                     </label>
                      
-                     <div class="contact__label">
+                     <label class="contact__label">
                         <input class="contact__input" type="email" name="userMail" aria-label="Enter your email address" placeholder="Email Address" minlength="10" required>
                         <span class="contact__form-error">This field is required</span>
-                     </div>
+                     </label>
                      
-                     <div class="contact__label">
+                     <label class="contact__label">
                         <input class="contact__input" type="text" name="userCompanyName" aria-label="Enter your company name" placeholder="Company Name" minlength="2" required>
                         <span class="contact__form-error">This field is required</span>
-                     </div>
+                     </label>
                      
-                     <div class="contact__label">
+                     <label class="contact__label">
                         <input class="contact__input" type="text" name="userTitle" aria-label="Enter your title" placeholder="Title" minlength="4" required>
                         <span class="contact__form-error">This field is required</span>
-                     </div>
+                     </label>
                      
-                     <div class="contact__label">
+                     <label class="contact__label">
                         <textarea class="contact__form-msg" name="userMessage" aria-label="Enter your message" placeholder="Message" cols="30" rows="10" minlength="5"></textarea>
                         <span class="contact__form-error">This field is required</span>
-                     </div>
-                     
-                     <button class="contact__form-btn" type="submit">Submit</button>
+                     </label>
+                     <button class="contact__form-btn" type="submit">submit</button>
                   </form>
                </div>
             </div>
